@@ -88,6 +88,8 @@ function add(){
         console.log(list);
         populate()
         plot()
+        source.value = ''
+        price.value = ''
     }
 }
 

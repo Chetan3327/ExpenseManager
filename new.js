@@ -1,11 +1,19 @@
 // let newitem = [{source: 'new', price: 478},{source: 'hello', price: 234}]
+
+// let newitem = [{source: 'game_dev', price: 10000, category: 1},{source: 'allowence', price: 20000}, {source: 'food', price: 3700, category:0}, {source: 'rent', price: 5000, category:0}]
 // let s = JSON.stringify(newitem)
 // localStorage.list = s
 
-// let newitem = [{source: 'game_dev', price: 10000, category: 1},{source: 'allowence', price: 20000}, {source: 'food', price: 3700, category:0}, {source: 'rent', price: 5000, category:0}]
-
 
 // income: 1, expence: 0
+window.onload = function(){
+    if(localStorage.list == undefined){
+        let newitem = [{source: 'test', price: 0, category: 1}]
+        let s = JSON.stringify(newitem)
+        localStorage.setItem('list', s)    
+    }
+}
+
 
 let source = document.getElementById("source")
 let price = document.getElementById("price")

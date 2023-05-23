@@ -37,12 +37,12 @@ function populate(){
         let ele2 = document.createElement('td')
         ele1.innerHTML = element.source
         if(element.category){
-            ele2.innerHTML = element.price + ''
+            ele2.innerHTML = '+ ' + element.price + ''
             ele2.style.color = 'green'
             income_sum+=element.price
         }else{
             ele2.style.color = 'red'
-            ele2.innerHTML = element.price + ''
+            ele2.innerHTML = '- ' + element.price + ''
             expense_sum+= element.price
         }
 

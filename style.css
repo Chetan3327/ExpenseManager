@@ -56,9 +56,10 @@ span{
   justify-content: space-around;
 }
 
-
-
-
+.close{
+  float: right;
+  cursor: pointer;
+}
 
 
 

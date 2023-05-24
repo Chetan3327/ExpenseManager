@@ -34,6 +34,13 @@ function populate(){
     ele2.innerHTML = "Transaction"
     row.appendChild(ele1)
     row.appendChild(ele2)
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("↺");
+    span.className = "close";
+    span.addEventListener('click', reset)
+    span.appendChild(txt);
+    ele2.appendChild(span)
+
     table.appendChild(row)
     let income_sum = 0
     let expense_sum = 0
@@ -60,6 +67,12 @@ function populate(){
         // console.log(yArray);
 
         // sum+=Number(element.price)
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        ele2.appendChild(span)
+
         row.appendChild(ele1)
         row.appendChild(ele2)
         table.appendChild(row)
@@ -74,6 +87,10 @@ function populate(){
 populate()
 plot()
 
+function reset(){
+    localStorage.setItem('list', JSON.stringify([{source: 'test', price: 0, category: 1}]))
+    location.reload()
+}
 
 function add(){
     if((source.value && price.value)){
